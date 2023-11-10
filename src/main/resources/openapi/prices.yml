@@ -1,0 +1,56 @@
+openapi: 3.0.0
+info:
+  title: API de Consulta de Precios
+  description: Permite obtener precios por fecha de aplicación, identificador de producto, identificador de cadena
+  version: 1.0.0
+servers:
+  - url: '/api/v1'
+paths:
+  /prices:
+    get:
+      summary: Consulta de precios
+      tags:
+        - prices
+      parameters:
+        - name: applicationDate
+          in: query
+          schema:
+            type: string
+          #required: false
+          description: Fecha de aplicación
+        - name: productId
+          in: query
+          schema:
+            type: long
+          #required: false
+          description: Identificador de producto
+        - name: brandId
+          in: query
+          schema:
+            type: long
+          #required: false
+          description: Identificador de cadena
+      responses:
+        '200':
+          description: Respuesta exitosa
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PriceResponse'
+components:
+  schemas:
+    PriceResponse:
+      type: object
+      properties:
+        productId:
+          type: long
+        brandId:
+          type: long
+        fee:
+          type: bigDecimal
+        startDate:
+          type: string
+        endDate:
+          type: string
+        priceFinal:
+          type: number
