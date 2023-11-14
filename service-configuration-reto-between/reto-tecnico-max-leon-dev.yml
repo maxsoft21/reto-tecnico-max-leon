@@ -1,0 +1,31 @@
+spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.security.reactive.ReactiveSecurityAutoConfiguration
+  r2dbc:
+    url: r2dbc:h2:mem:///testdb
+    #    driver: io.r2dbc.h2.H2ConnectionConfiguration
+    username: us
+    password: pa
+    schema: /schema.sql
+    data: /data.sql
+    pool:
+      max-size: 10
+      max-create-connection-time: 10s
+
+# Logging
+logging:
+  level:
+    org.springframework: INFO
+    org.hibernate: ERROR
+
+
+resilience4j.circuitbreaker.instances:
+  priceCircuitBreaker:
+    sliding-window-type: COUNT_BASED
+    sliding-window-size: 10
+    minimum-number-of-calls: 5
+    permitted-number-of-calls-in-half-open-state: 3
+    failure-rate-threshold: 50
+    wait-duration-in-open-state: 60s
+    record-failures: true
+    record-successes: true
