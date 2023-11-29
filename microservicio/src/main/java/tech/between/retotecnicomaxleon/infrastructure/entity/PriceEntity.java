@@ -1,4 +1,4 @@
-package tech.between.retotecnicomaxleon.infrastructure.adapter.entity;
+package tech.between.retotecnicomaxleon.infrastructure.entity;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;
@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @Setter
 @Builder
 @Table(name = "PRICES")
-public class Price {
+public class PriceEntity {
     @Id
     private Long id;
     @Column( "BRAND_ID")

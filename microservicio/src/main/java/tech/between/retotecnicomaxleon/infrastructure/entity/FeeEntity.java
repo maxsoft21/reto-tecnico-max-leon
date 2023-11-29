@@ -1,4 +1,4 @@
-package tech.between.retotecnicomaxleon.infrastructure.adapter.entity;
+package tech.between.retotecnicomaxleon.infrastructure.entity;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;
@@ -13,7 +13,7 @@ import java.math.BigDecimal;
 @Setter
 @Builder
 @Table(name = "FEES")
-public class Fee {
+public class FeeEntity {
     @Id
     @Column("PRICE_LIST")
     private Long priceList;

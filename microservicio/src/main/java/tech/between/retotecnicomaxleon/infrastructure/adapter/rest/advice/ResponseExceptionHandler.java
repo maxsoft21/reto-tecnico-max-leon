@@ -1,4 +1,4 @@
-package tech.between.retotecnicomaxleon.infrastructure.rest.advice;
+package tech.between.retotecnicomaxleon.infrastructure.adapter.rest.advice;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

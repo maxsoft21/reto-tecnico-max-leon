@@ -1,8 +1,8 @@
 package tech.between.retotecnicomaxleon.domain.port;
 
 import reactor.core.publisher.Mono;
-import tech.between.retotecnicomaxleon.infrastructure.adapter.entity.Fee;
-import tech.between.retotecnicomaxleon.infrastructure.adapter.entity.Price;
+import tech.between.retotecnicomaxleon.domain.model.Fee;
+import tech.between.retotecnicomaxleon.domain.model.Price;
 
 import java.time.LocalDateTime;
 

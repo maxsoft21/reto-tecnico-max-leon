@@ -1,4 +1,4 @@
-package tech.between.retotecnicomaxleon.infrastructure.rest.controller;
+package tech.between.retotecnicomaxleon.infrastructure.adapter.rest.controller;
 
 
 import lombok.extern.slf4j.Slf4j;
@@ -13,8 +13,8 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 import tech.between.retotecnicomaxleon.application.service.UserDetailsServiceImpl;
-import tech.between.retotecnicomaxleon.domain.dto.AuthenticationRequest;
-import tech.between.retotecnicomaxleon.domain.dto.AuthenticationResponse;
+import tech.between.retotecnicomaxleon.infrastructure.dto.AuthenticationRequest;
+import tech.between.retotecnicomaxleon.infrastructure.dto.AuthenticationResponse;
 import tech.between.retotecnicomaxleon.infrastructure.adapter.Utility.JwtUtils;
 import tech.between.retotecnicomaxleon.infrastructure.adapter.exception.ValidateException;
 

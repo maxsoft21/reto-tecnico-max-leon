@@ -1,4 +1,4 @@
-package tech.between.retotecnicomaxleon.domain.dto;
+package tech.between.retotecnicomaxleon.infrastructure.dto;
 
 import lombok.*;
 

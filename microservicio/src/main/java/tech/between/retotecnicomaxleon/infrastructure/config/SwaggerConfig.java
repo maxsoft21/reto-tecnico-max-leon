@@ -1,4 +1,4 @@
-package tech.between.retotecnicomaxleon.config;
+package tech.between.retotecnicomaxleon.infrastructure.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -29,7 +29,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .securitySchemes(Arrays.asList(apiKey()))
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("tech.between.retotecnicomaxleon.infrastructure.rest.controller"))
+                .apis(RequestHandlerSelectors.basePackage("tech.between.retotecnicomaxleon.infrastructure.adapter.rest.controller"))
                 .paths(PathSelectors.any()).build().apiInfo(apiInfo());
     }
 

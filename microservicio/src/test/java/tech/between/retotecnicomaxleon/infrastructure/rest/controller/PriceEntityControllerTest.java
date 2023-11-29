@@ -7,14 +7,14 @@ import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWeb
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpHeaders;
 import org.springframework.test.web.reactive.server.WebTestClient;
-import tech.between.retotecnicomaxleon.domain.dto.AuthenticationRequest;
-import tech.between.retotecnicomaxleon.domain.dto.AuthenticationResponse;
+import tech.between.retotecnicomaxleon.infrastructure.dto.AuthenticationRequest;
+import tech.between.retotecnicomaxleon.infrastructure.dto.AuthenticationResponse;
 import tech.between.retotecnicomaxleon.domain.model.PriceResponse;
 import tech.between.retotecnicomaxleon.infrastructure.adapter.Utility.Util;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureWebTestClient
-class PriceControllerTest {
+class PriceEntityControllerTest {
     @Autowired
     WebTestClient webTestClient;
 

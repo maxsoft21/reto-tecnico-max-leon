@@ -1,4 +1,4 @@
-package tech.between.retotecnicomaxleon.infrastructure.adapter.entity;
+package tech.between.retotecnicomaxleon.infrastructure.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,7 +16,7 @@ import java.util.Collection;
 @Data
 @Builder
 @Table(name = "usuarios")
-public class Usuario implements UserDetails {
+public class UsuarioEntity implements UserDetails {
 
     @Id
     private Long id;

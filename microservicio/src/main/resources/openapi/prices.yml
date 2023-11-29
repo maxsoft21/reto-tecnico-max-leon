@@ -54,3 +54,33 @@ components:
           type: string
         priceFinal:
           type: number
+    Fee:
+      type: object
+      properties:
+        priceList:
+          type: long
+        feeValue:
+          type: bigDecimal
+    Price:
+      type: object
+      properties:
+        id:
+          type: long
+        brandId:
+          type: long
+        startDate:
+          type: string
+          format: date-time
+        endDate:
+          type: string
+          format: date-time
+        priceList:
+          type: long
+        productId:
+          type: long
+        priority:
+          type: long
+        price:
+          type: bigDecimal
+        curr:
+          type: string

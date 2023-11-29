@@ -1,4 +1,4 @@
-package tech.between.retotecnicomaxleon.infrastructure.rest.filter;
+package tech.between.retotecnicomaxleon.infrastructure.adapter.rest.filter;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;

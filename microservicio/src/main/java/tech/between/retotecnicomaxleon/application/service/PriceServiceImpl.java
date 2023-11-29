@@ -7,11 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 import tech.between.retotecnicomaxleon.application.usecases.PriceService;
+import tech.between.retotecnicomaxleon.domain.model.Fee;
+import tech.between.retotecnicomaxleon.domain.model.Price;
 import tech.between.retotecnicomaxleon.domain.model.PriceResponse;
 import tech.between.retotecnicomaxleon.domain.port.PricePersistencePort;
 import tech.between.retotecnicomaxleon.infrastructure.adapter.Utility.Util;
-import tech.between.retotecnicomaxleon.infrastructure.adapter.entity.Fee;
-import tech.between.retotecnicomaxleon.infrastructure.adapter.entity.Price;
 
 import java.time.LocalDateTime;
 

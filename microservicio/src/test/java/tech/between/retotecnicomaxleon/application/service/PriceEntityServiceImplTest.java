@@ -9,11 +9,11 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
+import tech.between.retotecnicomaxleon.domain.model.Fee;
+import tech.between.retotecnicomaxleon.domain.model.Price;
 import tech.between.retotecnicomaxleon.domain.model.PriceResponse;
 import tech.between.retotecnicomaxleon.domain.port.PricePersistencePort;
 import tech.between.retotecnicomaxleon.infrastructure.adapter.Utility.Util;
-import tech.between.retotecnicomaxleon.infrastructure.adapter.entity.Fee;
-import tech.between.retotecnicomaxleon.infrastructure.adapter.entity.Price;
 
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -25,7 +25,7 @@ import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-class PriceServiceImplTest {
+class PriceEntityServiceImplTest {
 
     @InjectMocks
     PriceServiceImpl priceService;

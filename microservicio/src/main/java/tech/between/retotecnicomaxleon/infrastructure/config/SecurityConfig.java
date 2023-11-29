@@ -1,4 +1,4 @@
-package tech.between.retotecnicomaxleon.config;
+package tech.between.retotecnicomaxleon.infrastructure.config;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +17,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import tech.between.retotecnicomaxleon.application.service.UserDetailsServiceImpl;
-import tech.between.retotecnicomaxleon.infrastructure.rest.filter.JwtAuthenticationEntryPoint;
-import tech.between.retotecnicomaxleon.infrastructure.rest.filter.JwtAuthenticationFilter;
+import tech.between.retotecnicomaxleon.infrastructure.adapter.rest.filter.JwtAuthenticationEntryPoint;
+import tech.between.retotecnicomaxleon.infrastructure.adapter.rest.filter.JwtAuthenticationFilter;
 
 @EnableWebSecurity
 @Configuration

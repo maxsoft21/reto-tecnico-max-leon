@@ -1,4 +1,4 @@
-package tech.between.retotecnicomaxleon.infrastructure.rest.controller;
+package tech.between.retotecnicomaxleon.infrastructure.adapter.rest.controller;
 
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.Authorization;

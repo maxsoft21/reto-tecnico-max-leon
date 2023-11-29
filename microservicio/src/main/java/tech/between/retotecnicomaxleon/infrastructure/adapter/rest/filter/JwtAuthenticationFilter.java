@@ -1,4 +1,4 @@
-package tech.between.retotecnicomaxleon.infrastructure.rest.filter;
+package tech.between.retotecnicomaxleon.infrastructure.adapter.rest.filter;
 
 import io.jsonwebtoken.ExpiredJwtException;
 import org.springframework.beans.factory.annotation.Autowired;
