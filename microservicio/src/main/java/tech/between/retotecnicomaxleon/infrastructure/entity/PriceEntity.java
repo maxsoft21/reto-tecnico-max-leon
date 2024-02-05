@@ -5,6 +5,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
+import javax.persistence.Transient;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
@@ -33,4 +34,8 @@ public class PriceEntity {
     private BigDecimal price;
     @Column("CURR")
     private String curr;
+
+    @Transient
+    @Column("FEE_VALUE")
+    private BigDecimal feeValue;
 }

@@ -7,6 +7,6 @@ import tech.between.retotecnicomaxleon.infrastructure.entity.UsuarioEntity;
 
 public interface UsuarioRepository extends R2dbcRepository<UsuarioEntity,Long> {
 
-    public Mono<UsuarioEntity> findByUsername(String username);
+    Mono<UsuarioEntity> findByUsername(String username);
 
 }

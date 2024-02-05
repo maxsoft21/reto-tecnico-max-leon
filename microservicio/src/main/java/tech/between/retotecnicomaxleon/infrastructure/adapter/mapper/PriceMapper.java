@@ -20,6 +20,7 @@ public interface PriceMapper {
             @Mapping(source = "priority", target = "priority"),
             @Mapping(source = "price", target = "price"),
             @Mapping(source = "curr", target = "curr"),
+            @Mapping(source = "feeValue", target = "fee"),
     }
     )
     Price toPrice(PriceEntity priceEntity);

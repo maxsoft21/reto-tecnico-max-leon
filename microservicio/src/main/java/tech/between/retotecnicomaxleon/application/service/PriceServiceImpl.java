@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 import tech.between.retotecnicomaxleon.application.usecases.PriceService;
-import tech.between.retotecnicomaxleon.domain.model.Fee;
 import tech.between.retotecnicomaxleon.domain.model.Price;
 import tech.between.retotecnicomaxleon.domain.model.PriceResponse;
 import tech.between.retotecnicomaxleon.domain.port.PricePersistencePort;
@@ -27,18 +26,16 @@ public class PriceServiceImpl implements PriceService {
     @CircuitBreaker(name = "priceCircuitBreaker",fallbackMethod = "fallbackPriceResponseMock")
     public Mono<PriceResponse> getPriceByBrandProductAndDate(Long brandId, Long productId, LocalDateTime applicationDate) {
         Mono<Price> price = pricePersistencePort.getPriceByBrandProductAndDate(brandId, productId, applicationDate);
-        return price.flatMap(p -> {
-                    Mono<Fee> fee = pricePersistencePort.getFeeById(p.getPriceList());
-                    return Mono.zip(Mono.just(p), fee, (priceResult, feeResult) -> PriceResponse.builder()
+        return price.map(p ->
+                             PriceResponse.builder()
                             .productId(p.getProductId())
                             .brandId(p.getBrandId())
-                            .fee(feeResult.getFeeValue())
+                            .fee(p.getFee())
                             .startDate(Util.fromLocalDateTimeToString(p.getStartDate()))
                             .endDate(Util.fromLocalDateTimeToString(p.getEndDate()))
-                            .priceFinal(priceResult.getPrice())
+                            .priceFinal(p.getPrice())
                             .build()
-                    );
-                })
+                )
                 .onErrorResume(throwable -> {
                     // Manejo de errores con Fallback
                     return fallbackPriceResponseMock(throwable);

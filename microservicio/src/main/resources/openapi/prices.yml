@@ -54,13 +54,13 @@ components:
           type: string
         priceFinal:
           type: number
-    Fee:
-      type: object
-      properties:
-        priceList:
-          type: long
-        feeValue:
-          type: bigDecimal
+#    Fee:
+#      type: object
+#      properties:
+#        priceList:
+#          type: long
+#        feeValue:
+#          type: bigDecimal
     Price:
       type: object
       properties:
@@ -84,3 +84,9 @@ components:
           type: bigDecimal
         curr:
           type: string
+        fee:
+          type: bigDecimal
+#        fees:
+#          type: array
+#          items:
+#            $ref: '#/components/schemas/Fee'
